@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>One Page Wellness Site</title>
+  <link rel="stylesheet" href="CSS/one_page_website.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#video">Video</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home">
+    <!-- Background Video -->
+    <div class="video-background">
+      <video autoplay muted loop playsinline>
+        <source src="spa-media/facemask.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    
+    <!-- Home Content -->
+    <div class="home-content">
+      <h1>Discover Your Sanctuary of Sensory Bliss</h1>
+      <p>Immerse yourself in a world of calming scents and luxurious wellness rituals. Let our curated collection of aromatic treasures guide you on a journey of self-care and tranquility, where every breath brings you closer to inner peace.</p>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery">
+    <h2>Fragrance & Body Care Gallery</h2>
+    <div class="gallery gallery-4">
+      <div class="gallery-item">
+        <img src="spa-images/lavander.jpg" alt="Lavender bottle" />
+        <div class="caption">
+          <h3>Lavender Essence</h3>
+          <p>Calming lavender for peaceful moments</p>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="spa-images/calmness.jpg" alt="Peaceful bath ritual" />
+        <div class="caption">
+          <h3>Peaceful Rituals</h3>
+          <p>Bath rituals for ultimate relaxation</p>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="spa-images/natural.jpg" alt="Natural beauty products" />
+        <div class="caption">
+          <h3>Natural Beauty</h3>
+          <p>Pure, natural ingredients for your skin</p>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="spa-images/scents.jpg" alt="Aromatic scents collection" />
+        <div class="caption">
+          <h3>Aromatic Collection</h3>
+          <p>Curated scents for every mood</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Section -->
+  <section id="video">
+    <h2>Watch a Ritual in Motion</h2>
+    <div class="video-container">
+      <div class="video-box">
+        <h3>Face Mask Ritual</h3>
+        <video width="560" height="315" controls>
+          <source src="spa-media/facemask.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="video-box">
+        <h3>Beauty Drops Application</h3>
+        <video width="560" height="315" controls>
+          <source src="spa-media/beautydrops.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section id="contact">
+    <h2>Get in Touch</h2>
+    <form action="#" method="post">
+      <label for="name">Name:</label><br />
+      <input type="text" id="name" name="name" required /><br />
+
+      <label for="email">Email:</label><br />
+      <input type="email" id="email" name="email" required /><br />
+
+      <label for="message">Message:</label><br />
+      <textarea id="message" name="message" rows="4" required></textarea><br />
+
+      <input type="submit" value="Send Message" />
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Janet's Wellness Journal. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
