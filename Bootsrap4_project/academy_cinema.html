@@ -1,71 +1,241 @@
+<!-- Academy Cinemas Website - Bootstrap 4 Project -->
+<!-- This website showcases various Bootstrap 4 components for a movie theater -->
+ 
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
+    <!-- Required meta tags for Bootstrap 4 -->
     <meta charset="utf-8">
+    <!-- Responsive viewport meta tag - ensures proper scaling on mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap 4.1.3 CSS CDN - provides all Bootstrap styling -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <title>Academy Cinemas!</title>
   </head>
+
   <body>
     
+    <!-- Bootstrap Container - provides responsive fixed-width container -->
     <div class="container">
-
+      
+      <!-- BOOTSTRAP NAVBAR COMPONENT -->
+      <!-- Responsive navigation bar with Bootstrap classes -->
         <nav class="navbar navbar-expand-lg navbar-light bg-info">
-  
+          <div class="container-fluid"></div>
+            <!-- Collapsible navbar content for mobile responsiveness -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <!-- Bootstrap navigation list with margin-right auto -->
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <!-- Navigation links with Bootstrap text-light class for white text -->
+                  <a class="nav-link text-light" href="#about">About</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link text-light" href="#showtimes">Show times</a>
+                 </li>
+                 <li class="nav-item active">
+                   <a class="nav-link text-light" href="#deals">Deals</a>
+                  </li>
+              </ul>
+              <!-- Bootstrap inline form with search functionality -->
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <!-- Bootstrap button with multiple utility classes for spacing and color -->
+                <button class="btn btn-primary my-2 my-sm-0 text-light" type="submit">Search</button>
+              </form>
+            </div>
+          </div> 
+        </nav>
+      <!-- /BOOTSTRAP NAVBAR COMPONENT -->
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link text-light" href="#about">About</a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link text-light" href="#showtimes">Show times</a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link text-light" href="#deals">Deals</a>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-primary my-2 my-sm-0 text-light" type="submit">Search</button>
-    </form>
-  </div>
-</nav>
+      <!-- /BOOTSTRAP NAVBAR COMPONENT -->
 
-
-<div class="jumbotron jumbotron-fluid bg-info text-center">
+<!-- BOOTSTRAP JUMBOTRON COMPONENT -->
+<!-- Large showcase area with full-width fluid container and background color -->
+<div class="jumbotron jumbotron-fluid bg-info mt-5 text-center">
   <div class="container">
-    <h1 class="display-4 text-light">Academy Cinemas</h1>
-    <p class="lead">Sit back, relax and enjoy the show....</p>
+    <!-- Bootstrap display utility class for large heading text -->
+    <h1 class="display-4 text-light" style="color:#fff; font-family:roboto;font-weight:900;text-transform:uppercase;">Movie Deals</h1>
+    <!-- Bootstrap lead class for prominent paragraph text -->
+    <p class="lead">Check out our monthly deals...</p>
+    <!-- Bootstrap button that triggers modal - uses data attributes -->
+   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#register">See our monthly movie deals...</button>
   </div>
 </div>
+<!-- /BOOTSTRAP JUMBOTRON COMPONENT -->
 
-<div>
+<!-- /BOOTSTRAP JUMBOTRON COMPONENT -->
 
+<!-- BOOTSTRAP CAROUSEL COMPONENT - NEW COMPONENT ADDED FOR ASSIGNMENT -->
+<!-- Interactive image slider showcasing featured movies -->
+<div class="container my-5">
+  <!-- Bootstrap text utility classes for styling -->
+  <h3 class="text-center text-primary mb-4">Featured Movies This Week</h3>
+  <!-- Main carousel container with auto-slide functionality -->
+  <div id="featuredMoviesCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Carousel indicators (dots) for navigation -->
+    <ol class="carousel-indicators">
+      <li data-target="#featuredMoviesCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#featuredMoviesCarousel" data-slide-to="1"></li>
+      <li data-target="#featuredMoviesCarousel" data-slide-to="2"></li>
+    </ol>
+    <!-- Carousel slides container -->
+    <div class="carousel-inner">
+      <!-- First slide - active by default -->
+      <div class="carousel-item active">
+        <!-- Responsive image with custom styling for consistent display -->
+        <img class="d-block w-100" src="./img/kongskullisland.jpg" alt="Kong: Skull Island" style="height: 400px; object-fit: cover;">
+        <!-- Carousel caption - hidden on small screens, visible on medium+ -->
+        <div class="carousel-caption d-none d-md-block">
+          <!-- Bootstrap background and text utility classes -->
+          <h5 class="bg-dark text-light p-2 rounded">Kong: Skull Island</h5>
+          <p class="bg-dark text-light p-2 rounded">Adventure awaits in the domain of the mighty Kong!</p>
+        </div>
+      </div>
+      <!-- Second slide -->
+      <div class="carousel-item">
+        <img class="d-block w-100" src="./img/ghostintheshell.jpg" alt="Ghost in the Shell" style="height: 400px; object-fit: cover;">
+        <div class="carousel-caption d-none d-md-block">
+          <h5 class="bg-dark text-light p-2 rounded">Ghost in the Shell</h5>
+          <p class="bg-dark text-light p-2 rounded">A cyber-enhanced soldier fights the world's most dangerous criminals.</p>
+        </div>
+      </div>
+      <!-- Third slide -->
+      <div class="carousel-item">
+        <img class="d-block w-100" src="./img/beautyandthebeast.jpg" alt="Beauty and the Beast" style="height: 400px; object-fit: cover;">
+        <div class="carousel-caption d-none d-md-block">
+          <h5 class="bg-dark text-light p-2 rounded">Beauty and the Beast</h5>
+          <p class="bg-dark text-light p-2 rounded">A tale as old as time, now in theaters!</p>
+        </div>
+      </div>
+    </div>
+    <!-- Carousel navigation controls -->
+    <!-- Previous button -->
+    <a class="carousel-control-prev" href="#featuredMoviesCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <!-- Next button -->
+    <a class="carousel-control-next" href="#featuredMoviesCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+<!-- /BOOTSTRAP CAROUSEL COMPONENT - NEW COMPONENT ADDED FOR ASSIGNMENT -->
+
+<!-- /BOOTSTRAP CAROUSEL COMPONENT - NEW COMPONENT ADDED FOR ASSIGNMENT -->
+
+<!-- BOOTSTRAP INPUT GROUP & POPOVER COMPONENTS -->
+<!-- Email signup form with Bootstrap input group styling and popover functionality -->
+<div class="row">
+  <div class="container text-center col-6" id="deals">
+  <div class="container text-center">
+    <!-- Bootstrap display utility and spacing classes -->
+    <h1 class="display-5 my-4 col-lg-auto text-primary">Stay current on movies!</h1>
+  <!-- Bootstrap input group for combining input and button -->
+  <div class = "input-group mb-5 input-group-sm">
+  <input type="text" class="form-control" placeholder="Email">
+  <span class="input-group-btn">
+    <!-- Bootstrap button with popover functionality - data attributes trigger popover -->
+    <button type="button" class="btn btn-secondary btn-info" data-toggle="popover" data-placement="top" data-content="Submit your email to receive great movie reward deals!" title="Welcome!">Sign Up</button>
+  </span>
+</div>
+</div>
+</div>
+</div>
+<!-- /BOOTSTRAP INPUT GROUP & POPOVER COMPONENTS -->
+
+<!-- /BOOTSTRAP INPUT GROUP & POPOVER COMPONENTS -->
+
+<!-- BOOTSTRAP MODAL COMPONENT -->
+<!-- Modal dialog triggered by jumbotron button - provides registration form overlay -->
+ <div class="modal fade" id="register">
+  <!-- Modal dialog container with document role for accessibility -->
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <!-- Modal header with title and close button -->
+      <div class="modal-header">
+        <h5 class="modal-title">Register to see movie deals...</h5>
+        <!-- Bootstrap close button with data-dismiss attribute -->
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <!-- Modal body containing registration form -->
+      <div class="modal-body">
+        <form>
+          <!-- Bootstrap form groups with labels and form controls -->
+          <fieldset class="form-group">
+            <label for="firstname">First Name:</label>
+            <input type="text" class="form-control" id="firstname" placeholder="Enter First Name...">
+          </fieldset>
+          <fieldset class="form-group">
+            <label for="lastname">Last Name:</label>
+            <input type="text" class="form-control" id="lastname" placeholder="Enter Last Name...">
+          </fieldset>
+          <fieldset class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" placeholder="Email...">
+          </fieldset>
+          <fieldset class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" class="form-control" id="password" placeholder="Password...">
+          </fieldset> 
+        </form>
+      </div>
+      <!-- Modal footer with action buttons -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /BOOTSTRAP MODAL COMPONENT -->
+
+<!-- /BOOTSTRAP MODAL COMPONENT -->
+
+<!-- BOOTSTRAP FORM COMPONENT -->
+<!-- Additional registration form using Bootstrap form classes -->
+  <form>
+    <!-- Bootstrap form groups with proper styling -->
+    <div class="form-group">
+      <label for="email">Email address</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email">
+    </div>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" placeholder="Enter name">
+    </div>
+    <!-- Bootstrap button component -->
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
 </div>
 
-
+<!-- BOOTSTRAP GRID SYSTEM & RESPONSIVE IMAGES -->
+<!-- Three-column layout showcasing Bootstrap's grid system -->
 <div class="container">
   <div class="row">
-
+    <!-- First column with responsive image -->
     <div class="col-sm" id="about">     
+        <!-- Bootstrap responsive image class -->
         <img class="img-fluid" src="./img/pdx.jpg" alt="">
     </div>
+    <!-- Second column with content -->
     <div class="col-sm">     
         <h3>Accommodations:</h3>
         <p>Located on beautiful Portland, Oregon's Pearl District, our reels have been spinning since 1959.</p>
         <p>Showing our guests a great time is our passion and seeing their smiles is our pleasure!</p>
         <p>All of our Auditoriums are equipped with brand new Christie 3D&reg; sound systems!</p>
         <p>Relax in our extra-wide, plush cushioning recliners. Our seating arrangement is disability friendly &#9855;.</p>       
-
     </div>
+    <!-- Third column with Bootstrap list group -->
     <div class="col-sm" id="showtimes">
-
 <h3>Now Playing:</h3>    
+<!-- Bootstrap list group component -->
 <ul class="list-group">
   <li class="list-group-item">
     <a class="nav-link" href="#">Kong: Skull Island</a>
@@ -76,24 +246,31 @@
   <li class="list-group-item">
     <a class="nav-link" href="#">Beauty and the Beast</a>
   </li>
-  
-</ul>        
-
-    </div>
+  </ul>
   </div>
-</div>
+  </div>
+  </div>
+<!-- /BOOTSTRAP GRID SYSTEM & RESPONSIVE IMAGES -->
 
+<!-- /BOOTSTRAP GRID SYSTEM & RESPONSIVE IMAGES -->
 
-    <!-- Movie Cards -->
+<!--About section placeholder-->
+
+<!-- BOOTSTRAP CARD DECK COMPONENT -->
+<!-- Responsive card layout for displaying movie information -->
 <div class="container my-5" id="moviecards">
+    <!-- Bootstrap text utility classes -->
     <h3 class="text-primary mb-4">Showtimes:</h3>
+  <!-- Bootstrap card deck - creates equal height cards -->
   <div class="card-deck">
-
+    <!-- Individual Bootstrap cards -->
     <div class="card">
+      <!-- Card image with Bootstrap class -->
       <img src="./img/kongskullisland.jpg" class="card-img-top" alt="Kong: Skull Island">
       <div class="card-body">
         <h5 class="card-title">Kong: Skull Island</h5>
         <p class="card-text">A team of scientists explore an uncharted island in the Pacific, venturing into the domain of the mighty Kong, and must fight to escape a primal Eden</p>
+        <!-- Bootstrap badge components for showing times -->
         <span class="badge badge-pill badge-info">12:00 p.m.</span>
         <span class="badge badge-pill badge-info">1:30 p.m.</span>
         <span class="badge badge-pill badge-info">3:00 p.m.</span>
@@ -108,6 +285,7 @@
       <div class="card-body">
         <h5 class="card-title">Ghost in the Shell</h5>
         <p class="card-text">In the near future, Major Mila Killian is the first of her kind: a human saved from a terrible crash who is cyber-enhanced to be a perfect soldier devoted to stopping the world's most dangerous criminals.</p>
+        <!-- Bootstrap badges for showtimes -->
         <span class="badge badge-pill badge-info">12:00 p.m.</span>
         <span class="badge badge-pill badge-info">1:30 p.m.</span>
         <span class="badge badge-pill badge-info">3:00 p.m.</span>
@@ -122,6 +300,7 @@
       <div class="card-body">
         <h5 class="card-title">Beauty and the Beast</h5>
         <p class="card-text">A selfish prince is cursed to become a monster for the rest of his life, unless he learns to fall in love with a woman he keeps as a prisoner.</p>
+        <!-- Bootstrap badges for showtimes -->
         <span class="badge badge-pill badge-info">12:00 p.m.</span>
         <span class="badge badge-pill badge-info">1:30 p.m.</span>
         <span class="badge badge-pill badge-info">3:00 p.m.</span>
@@ -133,22 +312,26 @@
 
   </div>
 </div>
-<!-- /Movie Cards -->
+<!-- /BOOTSTRAP CARD DECK COMPONENT -->
+<!-- /BOOTSTRAP CARD DECK COMPONENT -->
 
-
-
-
+        <!-- BOOTSTRAP FORM COMPONENT - Newsletter Signup -->
         <div class="text-center" id="deals">
             <form>
+                <!-- Bootstrap text utility and spacing classes -->
                 <h1 class="text-primary my-5">Sign up for Movie Club Rewards!</h1>
+        <!-- Bootstrap form group -->
         <div class="form-group">
             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
         </div>
+        <!-- Bootstrap button -->
         <button type="submit" class="btn btn-primary">Submit</button>
         </form>
         </div>
            
+        <!-- BOOTSTRAP NAVIGATION COMPONENT - Footer Links -->
         <div class="container my-5">
+            <!-- Bootstrap inline navigation -->
             <ul class="nav nav-inline">
                 <li class="nav-item">
                   <small><a class="nav-link" href="#">Movie Rewards</a></small>
@@ -163,14 +346,50 @@
                   <small><a class="nav-link" href="#">&copy;2025 Academy Cinemas&reg;</a></small>
                 </li>
             </ul>
-
-
+        </div>
+        <!-- /BOOTSTRAP NAVIGATION COMPONENT - Footer Links -->
+        <!-- /BOOTSTRAP NAVIGATION COMPONENT - Footer Links -->
+        <!-- /footer-->
     </div>
+    <!-- /page content -->
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   
+    <!-- BOOTSTRAP JAVASCRIPT DEPENDENCIES -->
+    <!-- jQuery library - required for Bootstrap JavaScript components -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.js - required for Bootstrap tooltips and popovers -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <!-- Bootstrap JavaScript - provides interactive functionality -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+   <script>
+    /* CUSTOM JAVASCRIPT FOR BOOTSTRAP COMPONENTS */
+    
+    // Initialize popovers - Bootstrap requires manual initialization
+    $(document).ready(function(){
+        // Initialize all elements with data-toggle="popover"
+        $('[data-toggle="popover"]').popover({
+            trigger: 'click'  // Show popover on click instead of hover
+        });
+        
+        // Close popover when clicking outside - custom functionality
+        $(document).click(function (e) {
+            $('[data-toggle="popover"]').each(function () {
+                // If click is outside popover and button, hide the popover
+                if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+                    $(this).popover('hide');
+                }
+            });
+        });
+
+        // Initialize carousel with custom settings
+        $('#featuredMoviesCarousel').carousel({
+            interval: 4000, // Auto-slide every 4 seconds
+            pause: 'hover'  // Pause automatic sliding when hovering
+        });
+    });
+   </script>
+   <!-- /CUSTOM JAVASCRIPT FOR BOOTSTRAP COMPONENTS -->
+
   </body>
 </html>
